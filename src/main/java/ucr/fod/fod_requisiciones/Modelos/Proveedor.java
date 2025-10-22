@@ -3,7 +3,6 @@ package ucr.fod.fod_requisiciones.Modelos;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import ucr.fod.fod_requisiciones.Proceso;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
