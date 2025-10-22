@@ -14,8 +14,15 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .csrf(AbstractHttpConfigurer::disable)
-                .authorizeHttpRequests(
-                        auth -> auth.anyRequest().authenticated()
+                .authorizeHttpRequests(auth -> auth
+                        // Permitir acceso público a Swagger UI y OpenAPI docs
+                        .requestMatchers(
+                                "/swagger-ui/**",
+                                "/v3/api-docs/**",
+                                "/swagger-ui.html"
+                        ).permitAll()
+                        // Todas las demás rutas requieren autenticación
+                        .anyRequest().authenticated()
                 )
                 .httpBasic();
 

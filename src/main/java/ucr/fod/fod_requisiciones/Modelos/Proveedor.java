@@ -10,7 +10,7 @@ import java.util.Set;
 @Getter
 @Setter
 @Entity
-@Table(name = "proveedor")
+@Table(name = "Proveedor")
 public class Proveedor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -37,6 +37,7 @@ public class Proveedor {
 
     @Column(name = "cedula_juridica", length = 20)
     private String cedulaJuridica;
+    
 
     /*
     @OneToMany

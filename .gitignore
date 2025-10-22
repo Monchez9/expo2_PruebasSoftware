@@ -3,7 +3,7 @@ target/
 .mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-
+bin 
 ### STS ###
 .apt_generated
 .classpath
@@ -31,3 +31,10 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### EvoMaster Generated Files ###
+evomaster-output/
+generated_tests/
+
+### Generated Test Files ###
+src/test/java/ProveedorTest_*.java
